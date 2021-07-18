@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Калькулятор рассрочки</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.html">Кредитный калькулятор <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="installment.html">Калькулятор рассрочки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pvz.html">Пункты выдачи</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Расчёт ламината/плитки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Процент от суммы</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Полезные ссылки
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="https://www.21vek.by/" target="_blank">Основной сайт</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="input-and-output-data__block">
+                <div class="row">
+                    <div class="col pt-10">
+                        <div class="card">
+                            <div class="card-header">
+                                Ввод данных
+                            </div>
+                            <div class="card-body">
+                                <div class="input__summa">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Сумма, BYN</span>
+                                        </div>
+                                        <input type="text" class="form-control"
+                                            aria-label="Dollar amount (with dot and two decimal places)" id="amount"
+                                            placeholder="Сумма">
+                                    </div>
+                                </div>
+                                <div class="input__bank">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">Срок</label>
+                                        </div>
+                                        <select class="custom-select deposit-bank" id="month-select">
+                                            <option value="3" selected>3</option>
+                                            <option value="6">6</option>
+                                            <option value="9">9</option>
+                                            <option value="12">12</option>
+                                            <option value="18">18</option>
+                                            <option value="24">24</option>
+                                            <option value="36" >36</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input__summa">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">ПВ, %</span>
+                                        </div>
+                                        <input type="text" class="form-control"
+                                            aria-label="Dollar amount (with dot and two decimal places)" id="percent"
+                                            placeholder="ПВ, %">
+                                    </div>
+                                </div>
+                                <div class="input__summa">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Сумма ПВ, BYN</span>
+                                        </div>
+                                        <input type="text" class="form-control"
+                                            aria-label="Dollar amount (with dot and two decimal places)"
+                                            id="percent-result" placeholder="переведен в деньги" disabled>
+                                    </div>
+                                </div>
+                                <div class="input__summa">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Стоимость СП</span>
+                                        </div>
+                                        <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)"
+                                            id="percent-dopgarant" placeholder="стоимость гарантии">
+                                    </div>
+                                </div>
+                                <div class="calculation__button">
+                                    <button type="button" class="btn btn-success" id="start">Рассчитать</button>
+                                    <button type="button" class="btn btn-danger" id="cancel">Сбросить</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col pt-10">
+                        <div class="card">
+                            <div class="card-header">
+                                Шаблоны
+                            </div>
+                            <div class="card-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p>
+                                            Могу предложить Вам следующие условия: Период оплаты <span id="period1"></span> мес. <span id="pv1"></span>, ежемесячный платеж
+                                            <span id="monthly1"></span> р. Подскажите, пожалуйста, эти условия Вам подходят?
+                                            <footer class="blockquote-footer">Без переплат, без гарантии</footer>
+                                        </p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p>
+                                            Период оплаты <span id="period2"></span> мес.,
+                                            <span id="pv2"></span>, ежемесячный платеж <span id="monthly2"></span> р. Итоговая
+                                            сумма, которую Вы оплатите = <span id="itog2"></span> р.
+                                            <footer class="blockquote-footer">Без переплат, без гарантии</footer>
+                                        </p>
+                                    </blockquote>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p>
+                                            Могу предложить Вам следующие условия: Период оплаты <span id="period3"></span> мес. <span
+                                                id="pv3"></span>, ежемесячный платеж
+                                            <span id="monthly3"></span> р. Подскажите, пожалуйста, эти условия Вам подходят?
+                                        <footer class="blockquote-footer">Без переплат, с доп.гарантией</footer>
+                                        </p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p>
+                                            Период оплаты <span id="period4"></span> мес.,
+                                            <span id="pv4"></span>, ежемесячный платеж <span id="monthly4"></span> р. Итоговая
+                                            сумма, которую Вы оплатите = <span id="itog4"></span> р.
+                                        <footer class="blockquote-footer">Без переплат, с доп.гарантией</footer>
+                                        </p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calculation__block pt-10">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                Расчёты
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Cумма зк (вместе СП)</span>
+                                    </div>
+                                    <input type="text" class="form-control"
+                                        aria-label="Dollar amount (with dot and two decimal places)" id="output-sumdop-garant"
+                                        placeholder="0" readonly>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">ПВ без СП</span>
+                                    </div>
+                                    <input type="text" class="form-control"
+                                        aria-label="Dollar amount (with dot and two decimal places)" id="ouput-pv-bezgarant"
+                                        placeholder="0" readonly>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Еж.платёж без СП</span>
+                                    </div>
+                                    <input type="text" class="form-control"
+                                        aria-label="Dollar amount (with dot and two decimal places)" id="output-ej-bezgarant"
+                                        placeholder="0" readonly>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">ПВ с СП</span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)"
+                                        id="output-pv-sdop" placeholder="0" readonly>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Еж.платёж с СП</span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)"
+                                        id="output-ej-sdop" placeholder="0" readonly>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Разница (с СП и без)</span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)"
+                                        id="output-raznica" placeholder="0" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <script src="js/installment.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,807 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+  <!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+  <head>
+    <!-- Заголовок страницы в браузере -->
+    <title>Пункы выдачи заказов</title>
+    <!-- Подключаем CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Кодировка страницы -->
+    <meta charset="UTF-8" />
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <!-- Отображаемое тело страницы -->
+
+  <body>
+    <!-- Оболочка для демонстрации -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                >Кредитный калькулятор <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="installment.html"
+                >Калькулятор рассрочки</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="pvz.html">Пункты выдачи</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Расчёт ламината/плитки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Процент от суммы</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Полезные ссылки
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a
+                  class="dropdown-item"
+                  href="https://www.21vek.by/"
+                  target="_blank"
+                  >Основной сайт</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="wrapper">
+        <!-- Контент -->
+        <div class="block one">
+          <div class="block__item">
+            <div class="block__title">ПВЗ Барановичи</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Барановичи, ул. Брестская, 226/4 (ТЦ «Легион»)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Береза</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Береза, ул. Красноармейская, 64
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00,<br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Бобруйск</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Бобруйск, ул. Карла Маркса, 38</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Борисов</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Борисов, ул. Строителей 26, ТЦ Клад Наполеона
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Брест (2 шт.)</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Брест, пр-т. Машерова, д. 96</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-21:00, <br />
+                    сб-вс: 11:00-20:00.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">г. Брест, ул. Гродненская, 32</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-21:00, <br />
+                    сб-вс: 10:00-20:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Витебск (2 шт.)</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Витебск, ул. Петруся Бровки, д. 20 <br />
+                  г. Витебск, ул. Богдана Хмельницкого, 30 (центральный вход)
+                  <br />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  г. Витебск, ул. Петруся Бровки, д. 20
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-21:00, <br />
+                    сб-вс: 11:00-20:00.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  г. Витебск, ул. Богдана Хмельницкого, 30 (центральный вход)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-21:00, <br />
+                    сб-вс: 10:00-20:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Глубокое</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Глубокое, ул. Ленина, 1</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Гомель (2 шт.)</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Гомель, ул. Барыкина, 113 <br />
+                  г. Гомель, ул. Федосеенко, д. 4а <br />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">г. Гомель, ул. Барыкина, 113</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-21:00, <br />
+                    сб-вс: 10:00-20:00.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">г. Гомель, ул. Федосеенко, д. 4а</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-21:00, <br />
+                    сб-вс: 11:00-20:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Гродно (2 шт.)</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Гродно, ул. Болдина, д. 4Б <br />
+                  г. Гродно, ул. Свердлова, д. 17 <br />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">г. Гродно, ул. Болдина, д. 4Б</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-21:00, <br />
+                    сб-вс: 11:00-20:00.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">г. Гродно, ул. Свердлова, д. 17</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-21:00, <br />
+                    сб-вс: 11:00-20:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Жлобин</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Жлобин, ул. Первомайская, д. 111
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Жодино</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Жодино, ул. Калиновского, д. 13
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Калинковичи</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Калинковичи, ул. Советская, д. 144
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Кобрин</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Кобрин, ул. Дзержинского, 68А (пункт выдачи примыкает к ТЦ
+                  «Алиса»)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Кричев</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Кричев, ул. Пугачева, 35</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Лида</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Лида, ул. Чапаева, д. 18, пом. 1
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Минск (6 шт.)</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Минск, ул. Тростенецкая, д. 17 <br />
+                  г. Минск, ул. Уманская, 54 (ТЦ «Глобо», ст.м. Михалово) (пункт
+                  выдачи на 1-м этаже) <br />
+                  г. Минск, ул. Кальварийская, 21 (ст.м. Молодежная) <br />
+                  г. Минск, ул. Ложинская, 4 (БЦ «Порт», ст.м. Уручье) <br />
+                  г. Минск, ул. Сурганова, 57Б (ТЦ «Европа», пав. 315) (пункт
+                  выдачи на 3-м этаже) <br />
+                  г. Минск, пр. Победителей, 84 (1-й этаж ТРЦ «Арена сити»)
+                  <br />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">г. Минск, ул. Тростенецкая, д. 17</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 09:00-21:00, <br />
+                    сб-вс: 09:00-20:00.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  г. Минск, ул. Уманская, 54 (ТЦ «Глобо», ст.м. Михалово) (пункт
+                  выдачи на 1-м этаже)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-21:00, <br />
+                    сб-вс: 10:00-20:00.
+                  </p>
+                  <!--<p class="card-text">-->
+                  <!--    Ограничения по весу и габаритам <br>-->
+                  <!--    На ул. Уманская и ул. Сурганова: до 70 кг., до 1,3 м куб., длина 1 стороны до 140 см.-->
+                  <!--</p>-->
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  г. Минск, ул. Кальварийская, 21 (ст.м. Молодежная)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 09:00-21:00, <br />
+                    сб-вс: 09:00-20:00.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  г. Минск, ул. Ложинская, 4 (БЦ «Порт», ст.м. Уручье)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 09:00-21:00, <br />
+                    сб-вс: 09:00-20:00.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  г. Минск, ул. Сурганова, 57Б (ТЦ «Европа», пав. 315) (пункт
+                  выдачи на 3-м этаже)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-21:00, <br />
+                    сб-вс: 10:00-20:00.
+                  </p>
+                  <p class="card-text">
+                    Ограничения по весу и габаритам <br />
+                    На ул. Уманская и ул. Сурганова: до 70 кг., до 1,3 м куб.,
+                    длина 1 стороны до 140 см.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  г. Минск, пр. Победителей, 84 (1-й этаж ТРЦ «Арена сити»)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-21:00, <br />
+                    сб-вс: 10:00-20:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Марьина Горка</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Марьина Горка, ул. Чапаева, 3</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Могилёв (2 шт.)</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Могилев, пр-т. Пушкинский, д. 43а <br />
+                  г. Могилев, ул. Якубовского, 22А <br />
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  г. Могилев, пр-т. Пушкинский, д. 43а (Вход со стороны
+                  проспекта)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-21:00, <br />
+                    сб-вс: 11:00-20:00.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">г. Могилев, ул. Якубовского, 22А</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-21:00, <br />
+                    сб-вс: 10:00-20:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Мозырь</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Мозырь, ул. Ленинская, д. 12</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Молодечно</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Молодечно, ул. Виленская, д. 13А
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Новогрудок</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">﻿г. Новогрудок, ул. Ленина, 5</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Новополоцк</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Новополоцк, ул. Еронько, 7А (ТЦ «Квартал 10»)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-21:00, <br />
+                    сб-вс: 11:00-20:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Орша</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Орша, ул. Ленина, д. 130</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Осиповичи</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Осиповичи, ул. Дзержинского, д. 44
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Пинск</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Пинск, ул. Брестская, 72Д</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Полоцк</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Полоцк, ул. Евфросинии Полоцкой, д. 29
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Поставы</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Поставы, ул. Октябрьская, 46</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Речица</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Речица, ул. К.Маркса , д. 3</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Светлогорск</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Светлогорск, ул. Батова, 1 (ТЦ «Пассаж»)
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Слоним</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Слоним, ул. Пушкина, д. 13</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Слуцк</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Слуцк, ул. Ленина, д. 98Б/1</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Сморгонь</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">г. Сморгонь, ул. Юбилейная, 21А</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 11:00-20:00, <br />
+                    сб-вс: 11:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block__item">
+            <div class="block__title">ПВЗ Солигорск</div>
+            <div class="block__text">
+              <div class="card">
+                <div class="card-header">
+                  г. Солигорск, ул. Козлова, д. 46а (рядом с магазином "Марко")
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    График работы <br />
+                    пн-пт: 10:00-20:00, <br />
+                    сб-вс: 10:00-19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Подключаем файл JS скриптов -->
+        <script
+          src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+          integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+          integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+          crossorigin="anonymous"
+        ></script>
+        <!-- Подключаем jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="js/script.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
